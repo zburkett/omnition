@@ -5,6 +5,7 @@ Decompressing files
 params.options = [:]
 
 process GUNZIP {
+    container "bioraddbg/omnition-core:${workflow.manifest.version}"
     tag "${file}"
     if (workflow.profile == 'aws') {
         label 'small'

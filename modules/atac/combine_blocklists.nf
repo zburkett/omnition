@@ -12,6 +12,7 @@ process COMBINE_BLOCKLISTS {
         label 'memory_xxsmall'
     }
     errorStrategy 'terminate'
+    container "bioraddbg/omnition-core:${workflow.manifest.version}"
 
     input:
     path blocklist

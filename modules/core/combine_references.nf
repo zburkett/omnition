@@ -5,6 +5,7 @@ Combining mixed species references together
 params.options = [:]
 
 process COMBINE_REFERENCES {
+    container "bioraddbg/omnition-core:${workflow.manifest.version}"
     publishDir "${params.options.reference.directory}/", mode: 'copy', overwrite: true
     if (workflow.profile == 'aws') {
         label 'medium'

@@ -5,6 +5,7 @@ Create an empty blocklist
 params.options = [:]
 
 process GENERATE_EMPTY_BLOCKLIST {
+  container "bioraddbg/omnition-core:${workflow.manifest.version}"
     if (workflow.profile == 'aws') {
         label 'small'
   } else {

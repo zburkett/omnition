@@ -3,6 +3,7 @@ Check ATAC containers
 */
 
 process SINGULARITY_PULL {
+    container "bioraddbg/omnition-core:${workflow.manifest.version}"
     input:
     val module_files
 

@@ -5,6 +5,7 @@ Compile all TI errors
 params.options = [:]
 
 process TI_ERROR_CHECK {
+  container "bioraddbg/omnition-core:${workflow.manifest.version}"
     if (workflow.profile == 'aws') {
         label 'small'
   } else {

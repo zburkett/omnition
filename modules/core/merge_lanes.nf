@@ -3,6 +3,7 @@ Merge lane split fastqs
 */
 
 process MERGE_LANES {
+    container "bioraddbg/omnition-core:${workflow.manifest.version}"
     tag "${sampleId}"
     if (workflow.profile == 'aws') {
         label 'xlarge'
