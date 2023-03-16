@@ -5,6 +5,7 @@ Verify reference formatting
 params.options = [:]
 
 process VERIFY_REFERENCES {
+    container "bioraddbg/omnition-core:${workflow.manifest.version}"
     if (workflow.profile == 'aws') {
         label 'small'
     } else {
